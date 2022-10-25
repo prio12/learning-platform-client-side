@@ -3,6 +3,7 @@ import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import Logo from '../../assest/logo/tutor-by-arsalart-dribbble.png'
 import './Header.css'
 
@@ -11,11 +12,11 @@ const Header = () => {
         <Navbar  expand="lg" >
       <Container className='header'>
         <Image src={Logo} roundedCircle className='logo'></Image>
-        <Navbar.Brand ><span className='title'>Learning Mate</span></Navbar.Brand>
+        <Navbar.Brand as={Link} to='/'><span className='title'>Learning Mate</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className='text-primary fw-bolder' href="#features">Courses</Nav.Link>
+            <Nav.Link className='text-primary fw-bolder' as={Link} to='/courses'>Courses</Nav.Link>
             <Nav.Link className='text-primary fw-bolder' href="#pricing">FAQ</Nav.Link>
             <Nav.Link className='text-primary fw-bolder' href="#pricing">Blog</Nav.Link>
             <Nav.Link className='text-primary fw-bolder' href="#pricing">toggle theme</Nav.Link>

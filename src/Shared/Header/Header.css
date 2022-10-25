@@ -5,6 +5,7 @@
     color: orange;
     font-size: 25px;
     font-weight: bolder;
+    text-decoration: none;
 }
 .title:hover {
     color: blue;

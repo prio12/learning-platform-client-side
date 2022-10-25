@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Outlet/Main";
+import Courses from "../../pages/Courses/Courses/Courses";
 import Home from "../../pages/Home/Home";
 
 export const router = createBrowserRouter([
@@ -11,7 +12,12 @@ export const router = createBrowserRouter([
                 path:'/',
                 element:<Home></Home>,
                 loader: () => fetch('http://localhost:5000/homeData')
+            },
+            {
+                path:'/courses',
+                element:<Courses></Courses>
             }
+
         ]
     }
 
