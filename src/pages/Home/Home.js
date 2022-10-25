@@ -6,6 +6,7 @@ import Feedback from './Feedback/Feedback';
 
 
 import './Home.css'
+import TrustedCompanies from './TrustedCompanies/TrustedCompanies';
 
 const Home = () => {
 
@@ -27,6 +28,11 @@ const Home = () => {
       <div className='my-5'>
         <Container>
                 <Feedback></Feedback>
+        </Container>
+      </div>
+      <div>
+        <Container>
+                <TrustedCompanies></TrustedCompanies>
         </Container>
       </div>
       </div>
