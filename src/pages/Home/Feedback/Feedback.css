@@ -1,0 +1,10 @@
+
+.feedback-container {
+    background-color: burlywood;
+    border-radius: 20px;
+}
+.feedback {
+    background-color: red;
+    /* border: 10px solid black; */
+    border-radius: 50%;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import HomeDetails from '../HomeDetails/HomeDetails';
+import Feedback from './Feedback/Feedback';
 
 
 import './Home.css'
@@ -10,9 +11,10 @@ const Home = () => {
 
   const data = useLoaderData();
     return (
-      <Container>
-            <h3 className='text-center'>Welcome motherfuckers</h3>
-            <div>
+      <div>
+        <Container className='home'>
+            <h3 className='text-center py-5 greeting-title'>Welcome To Learning Mate</h3>
+            <div className='home-details-container'>
               {
                 data.map(details => <HomeDetails
                 key={details.id}
@@ -20,7 +22,15 @@ const Home = () => {
                 ></HomeDetails> )
               }
             </div>
+           
       </Container>
+      <div className='my-5'>
+        <Container>
+                <Feedback></Feedback>
+        </Container>
+      </div>
+      </div>
+       
         
     );
 };

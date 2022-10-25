@@ -1,3 +1,9 @@
-.home-container {
-    background-color: steelblue;
+.home {
+    background-color: lightpink;
+    box-shadow: 5px 10px 15px 5px;
+    padding: 10px;
+}
+.greeting-title {
+    font-size: 40px;
+    font-weight: bolder;
 }
