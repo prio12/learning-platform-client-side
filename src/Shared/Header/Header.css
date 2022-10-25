@@ -1,0 +1,19 @@
+.header{
+    padding: 20px;
+}
+.title {
+    color: orange;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.title:hover {
+    color: blue;
+}
+.logo {
+    height: 60px;
+    margin-right: 10px;
+    /* background-color: black; */
+}
+/* .routes {
+    color: blue;
+} */
