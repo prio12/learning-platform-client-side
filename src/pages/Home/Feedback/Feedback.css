@@ -1,10 +1,13 @@
 
 .feedback-container {
-    background-color: burlywood;
+    background-color: lightpink;
     border-radius: 20px;
+    box-shadow: 10px 5px;
 }
-.feedback {
-    background-color: red;
-    /* border: 10px solid black; */
+.feedback-details {
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
+    background-color:black;
+    color: white;
 }

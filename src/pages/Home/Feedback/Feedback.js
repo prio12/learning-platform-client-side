@@ -3,18 +3,24 @@ import './Feedback.css'
 
 const Feedback = () => {
     return (
-        <div className='d-flex w-full feedback-container container justify-content-between  p-4'>
+        <div className='d-flex w-full feedback-container container justify-content-between p-4'>
             <div>
-                <h4 className='feedback text-center'>1M</h4>
-                <h3>Users</h3>
-            </div>
-            <div className='w-100%'>
-                <h4 className='feedback text-center'>4.8</h4>
-                <h3>Ratings</h3>
+                <div className='d-flex justify-content-center align-items-center feedback-details ' >
+                <h4 className='fw-bold'>1M</h4>
+                </div>
+                <h3 className='text-center fw-bolder'>Users</h3>
             </div>
             <div>
-                <h4 className='feedback text-center'>50K+</h4>
-                <h3>Review</h3>
+                <div className='d-flex justify-content-center align-items-center feedback-details ' >
+                <h4 className='fw-bold'>4.8</h4>
+                </div>
+                <h3 className='text-center fw-bolder'>Ratings</h3>
+            </div>
+            <div>
+                <div className='d-flex justify-content-center align-items-center feedback-details ' > 
+                <h4 className='fw-bold'> 50K+</h4>
+                </div>
+                <h3 className='text-center fw-bolder'>Review</h3>
             </div>
         </div>
     );

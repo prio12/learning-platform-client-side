@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Image } from 'react-bootstrap';
+import './HomeDetails.css'
 
 
 const HomeDetails = ({homePages}) => {
@@ -8,10 +9,10 @@ const HomeDetails = ({homePages}) => {
     console.log(title,details,img)
     return (
         <Container>
-                <div className='d-flex align-items-center gap-5 mb-5'>
+                <div className='d-flex home-details align-items-center mb-5 gap-5'>
                     <Image rounded style={{width:'50%'}} src={img}></Image>
                     <div>
-                        <h3>{title}</h3>
+                        <h3 className='fw-bolder'>{title}</h3>
                         <p>{details}</p>
                     </div>
                 </div>

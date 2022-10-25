@@ -1,9 +1,13 @@
 .home {
-    background-color: lightpink;
+    background-color: DarkSalmon;
     box-shadow: 5px 10px 15px 5px;
     padding: 10px;
 }
 .greeting-title {
     font-size: 40px;
     font-weight: bolder;
+}
+.feedback-section {
+    background-color: DarkSalmon;
+    box-shadow: 5px 10px 15px 5px;;
 }
