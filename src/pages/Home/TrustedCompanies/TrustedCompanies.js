@@ -10,7 +10,7 @@ const TrustedCompanies = () => {
     <Container>
       <div className="carousel-container">
         <div className="carousel-text">
-        <h4>Trusted by the best</h4>
+        <h4 className="fw-bolder">Trusted by the best</h4>
         <p>
           Leading companies use the same courses to help employees keep their
           skills fresh.

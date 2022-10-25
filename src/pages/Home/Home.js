@@ -31,9 +31,11 @@ const Home = () => {
         </Container>
       </div>
       <div>
+        <div className='container  p-5 rounded'>
         <Container>
                 <TrustedCompanies></TrustedCompanies>
         </Container>
+        </div>
       </div>
       </div>
        
