@@ -17,8 +17,8 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link className='text-primary fw-bolder' as={Link} to='/courses'>Courses</Nav.Link>
-            <Nav.Link className='text-primary fw-bolder' href="#pricing">FAQ</Nav.Link>
-            <Nav.Link className='text-primary fw-bolder' href="#pricing">Blog</Nav.Link>
+            <Nav.Link className='text-primary fw-bolder' as={Link} to='/faq'>FAQ</Nav.Link>
+            <Nav.Link className='text-primary fw-bolder' as={Link} to='blog'>Blog</Nav.Link>
             <Nav.Link className='text-primary fw-bolder' href="#pricing">toggle theme</Nav.Link>
           </Nav>
           <Nav>
