@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import './SignIn.css'
 
@@ -45,6 +46,7 @@ const SignIn = () => {
         <Button variant="outline-danger" type="submit">
             Log in
         </Button>
+        <p className='mt-2 fw-bold'>New here? <Link to='/signup'>Create a new account</Link></p>
       <Form.Text className="text-danger">
           {/* We'll never share your email with anyone else. */}
         </Form.Text>

@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import './SignUp.css'
 
@@ -40,8 +40,12 @@ const SignUp = () => {
             <Container className='form-container p-5'>
             <Form  onSubmit={handleSignUp}>
       <Form.Group className="mb-3" controlId="formBasicText">
-        <Form.Label ><span className='fw-bold'>Name</span></Form.Label>
+        <Form.Label ><span className='fw-bold'>Full name</span></Form.Label>
         <Form.Control name='name'  type="text" placeholder="Name" />
+        </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicUrl">
+        <Form.Label ><span className='fw-bold'>Photo Url</span></Form.Label>
+        <Form.Control name='name'  type="text" placeholder="Photo Url" />
         </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label><span className='fw-bold'>Email</span></Form.Label>
@@ -57,6 +61,7 @@ const SignUp = () => {
         <Button variant="outline-danger" type="submit">
             Sign up
         </Button>
+        <p className='mt-2 fw-bold'>Already have an account? <Link to='/signIn'>Login</Link></p>
       <Form.Text className="text-danger">
           {/* We'll never share your email with anyone else. */}
         </Form.Text>
