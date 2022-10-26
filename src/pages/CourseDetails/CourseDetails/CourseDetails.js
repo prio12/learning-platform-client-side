@@ -15,8 +15,11 @@ const CourseDetails = () => {
                 <div className='mb-5'>
                 <h1 className='text-center fw-bolder'>{name}</h1>
                 <div>
-                <p className='text-center'><small>Before you enroll here's some instruction about this course.</small></p>
-                <p className='text-center fw-bold'><small>Download PDF</small> <PdfDownload></PdfDownload></p>
+                <p className='text-center'><small>Before you enroll here's some information about this course.</small></p>
+                {/* <p className='text-center fw-bold'><small>Download PDF</small></p> */}
+                <div>
+                <PdfDownload pdfDetails={cardDetails}></PdfDownload>
+                </div>
                 </div>
                 </div>
                 <div className='d-flex course-details-container rounded justify-content-center align-items-center'>
