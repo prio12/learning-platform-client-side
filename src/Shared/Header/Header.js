@@ -10,7 +10,7 @@ import './Header.css'
 const Header = () => {
     return (
         <Navbar  expand="lg" >
-      <Container className='header'>
+      <Container className='header mb-3'>
         <Image src={Logo} roundedCircle className='logo'></Image>
         <Navbar.Brand as={Link} to='/'><span className='title'>Learning Mate</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
