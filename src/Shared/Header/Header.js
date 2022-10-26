@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,8 +8,18 @@ import Logo from "../../assest/logo/tutor-by-arsalart-dribbble.png";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import "./Header.css";
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
+
+  const {user, logOut} = useContext(AuthContext)
+
+  const handleLogOut = () =>{
+    logOut()
+    .then(() =>{})
+    .then(error => console.error(error))
+  }
 
   const [theme,setTheme] =useState('')
 
@@ -51,11 +61,20 @@ const Header = () => {
               </div>
             </div>
           <Nav>
-            <Nav.Link as={Link} to='/signup' className="text-primary fw-bolder" >
-              Signup
-            </Nav.Link>
-            <Nav.Link as={Link} to='/signIn' className="text-primary fw-bolder" >
-              Login
+            <Nav.Link>
+            {
+                    user?.uid ?
+                    <>
+                        <span>{user.displayName}</span>
+                        <Button  variant="outline-info mx-2" onClick={handleLogOut}>Log out</Button>
+                    </>
+                    :
+                    <>
+                        <Button as={Link} to="/signIn" variant="outline-info mx-2">Sign in</Button>
+                        <Button as={Link} to="/signup" variant="outline-danger mx-2">Sign up</Button>
+                        
+                    </>
+                }
             </Nav.Link>
             <Nav.Link
               className="text-primary fw-bolder"

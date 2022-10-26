@@ -61,7 +61,7 @@ const SignUp = () => {
         <Button variant="outline-danger" type="submit">
             Sign up
         </Button>
-        <p className='mt-2 fw-bold'>Already have an account? <Link to='/signIn'>Login</Link></p>
+        <p className='mt-2 fw-bold'>Already have an account? <Link to='/signIn'>Sign</Link></p>
       <Form.Text className="text-danger">
           {/* We'll never share your email with anyone else. */}
         </Form.Text>

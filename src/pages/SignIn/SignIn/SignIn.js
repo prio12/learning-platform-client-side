@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
@@ -28,9 +28,11 @@ const SignIn = () => {
     }
     return (
         <div className='form-holder login-form-container container rounded p-5'>
-            <h3 className='text-center fw-bold mb-5'>Login</h3>
+            <h3 className='text-center fw-bold mb-5'>Sign in</h3>
             <div>
-            <Container className='form-container p-5 '>
+            <Row>
+                <Col lg='8'>
+                <Container className='form-container p-5 '>
             <Form  onSubmit={handleSignIn}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label><span className='fw-bold'>Email</span></Form.Label>
@@ -44,7 +46,7 @@ const SignIn = () => {
         <Form.Control name='password' type="password" placeholder="Password" required />
       </Form.Group>
         <Button variant="outline-danger" type="submit">
-            Log in
+            Sign in
         </Button>
         <p className='mt-2 fw-bold'>New here? <Link to='/signup'>Create a new account</Link></p>
       <Form.Text className="text-danger">
@@ -52,6 +54,19 @@ const SignIn = () => {
         </Form.Text>
     </Form>
             </Container>
+                </Col>
+                <Col lg='4' className='more-signIn-sec p-5'>
+                    <h5 className='text-center fw-bold'>More Ways To Sign in</h5>
+                        <div className='text-center mb-2 mt-5'>
+                        <Button variant="outline-primary">Sign in With Google</Button>
+                        </div>
+                        <div className='text-center'>
+                        <Button variant="outline-danger">Sign in With Github</Button>
+                        </div>
+                    
+                   
+                </Col>
+            </Row>
             </div>
         </div>
     );

@@ -1,3 +1,7 @@
 .login-form-container {
     margin-top: 120px;
 }
+.more-signIn-sec {
+    background-color: LightPink;
+    box-shadow: 5px 20px 30px 5px;
+}
