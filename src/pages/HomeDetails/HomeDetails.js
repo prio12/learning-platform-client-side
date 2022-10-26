@@ -6,7 +6,7 @@ import './HomeDetails.css'
 const HomeDetails = ({homePages}) => {
 
     const {title, details, img} = homePages;
-    console.log(title,details,img)
+    // console.log(title,details,img)
     return (
         <Container>
                 <div className='d-flex home-details align-items-center mb-5 gap-5'>
