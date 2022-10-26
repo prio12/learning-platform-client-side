@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Image } from 'react-bootstrap';
+import {Button, Container, Image } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import './CourseDetails.css'
 
@@ -21,7 +21,7 @@ const CourseDetails = () => {
                             <p>Total Enrolled: {total_downloaded}K</p>
                             <p>Price: {price}$</p>
                         </div>
-                        <button>Get premium access</button>
+                        <Button variant="outline-danger"><span className='fw-bold'>Get premium access</span></Button>
                     </div>
                 </div>
             </Container>
