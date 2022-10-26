@@ -1,7 +1,9 @@
 import React from 'react';
 import {Button, Container, Image } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
+import PdfDownload from '../PDF/PdfDownload';
 import './CourseDetails.css'
+
 
 const CourseDetails = () => {
 
@@ -10,7 +12,13 @@ const CourseDetails = () => {
     return (
         <div className='details-section p-5 container rounded'>
             <Container>
-                <h1 className='text-center fw-bolder mb-5'>{name}</h1>
+                <div className='mb-5'>
+                <h1 className='text-center fw-bolder'>{name}</h1>
+                <div>
+                <p className='text-center'><small>Before you enroll here's some instruction about this course.</small></p>
+                <p className='text-center fw-bold'><small>Download PDF</small> <PdfDownload></PdfDownload></p>
+                </div>
+                </div>
                 <div className='d-flex course-details-container rounded justify-content-center align-items-center'>
                     <Image rounded style={{width:'50%'}} src={thumbnail_url}></Image>
                     <div className='ms-4 course-details-holder'>
