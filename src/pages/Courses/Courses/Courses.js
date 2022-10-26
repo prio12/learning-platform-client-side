@@ -12,7 +12,7 @@ const Courses = () => {
          <div>
              <Container>
                 <Row>
-                    <Col className='bg-info' lg='4'>
+                    <Col className='bg-info' lg='2'>
                         <h4>Total Courses : {courses.length}</h4>
                         {
                             courses.map(course => <LeftSideNav
@@ -21,7 +21,7 @@ const Courses = () => {
                             ></LeftSideNav> )
                         }
                     </Col>
-                    <Col className='bg-primary' lg = '8'>
+                    <Col className='bg-primary' lg = '10'>
                         <h3>right side</h3>
                         {
                             courses.map(course => <CourseCard
