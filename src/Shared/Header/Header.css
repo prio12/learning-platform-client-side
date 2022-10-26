@@ -18,11 +18,11 @@
     margin-right: 10px;
 }
 .toggle {
-    margin-top: 15px;
-    margin-right: 5px;
+    /* margin-top: 15px; */
+    margin-right: 15px;
 }
 .theme {
-    margin-top: 9px;
-    margin-right: 5px;
+    margin-top: 20px;
+    margin-right: 15px;
     font-weight: bolder;
 }

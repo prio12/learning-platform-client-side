@@ -37,20 +37,25 @@ const Header = () => {
               Courses
             </Nav.Link>
             <Nav.Link className="text-primary fw-bolder" as={Link} to="/faq">
-              FAQ
+            FAQ
             </Nav.Link>
             <Nav.Link className="text-primary fw-bolder" as={Link} to="blog">
               Blog
             </Nav.Link>
+            </Nav>
+            <div className="d-flex align-items-center justify-content-center">
             <p className="theme text-primary">{theme}</p>
               <div>
-                <BsFillSunFill onClick={handleLightTheme} className="toggle"></BsFillSunFill>
-                <BsFillMoonFill onClick={handleDarkTheme} className="toggle"></BsFillMoonFill>
+                <BsFillSunFill className="toggle" onClick={handleLightTheme} ></BsFillSunFill>
+                <BsFillMoonFill className="toggle" onClick={handleDarkTheme} ></BsFillMoonFill>
               </div>
-            </Nav>
+            </div>
           <Nav>
-            <Nav.Link className="text-primary fw-bolder" href="#deets">
-              More deets
+            <Nav.Link as={Link} to='/signup' className="text-primary fw-bolder" >
+              Signup
+            </Nav.Link>
+            <Nav.Link as={Link} to='/signIn' className="text-primary fw-bolder" >
+              Login
             </Nav.Link>
             <Nav.Link
               className="text-primary fw-bolder"

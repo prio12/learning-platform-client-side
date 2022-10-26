@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Container, Image } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import PdfDownload from '../PDF/PdfDownload';
 import './CourseDetails.css'
 
@@ -15,7 +15,7 @@ const CourseDetails = () => {
                 <div className='mb-5'>
                 <h1 className='text-center fw-bolder'>{name}</h1>
                 <div>
-                <p className='text-center'><small>Before you enroll here's some information about this course.</small></p>
+                <p className='text-center'><small>Before you enroll here're some information about this course.</small></p>
                 {/* <p className='text-center fw-bold'><small>Download PDF</small></p> */}
                 <div>
                 <PdfDownload pdfDetails={cardDetails}></PdfDownload>
@@ -32,7 +32,7 @@ const CourseDetails = () => {
                             <p>Total Enrolled: {total_downloaded}K</p>
                             <p>Price: {price}$</p>
                         </div>
-                        <Button variant="outline-danger"><span className='fw-bold'>Get premium access</span></Button>
+                        <Link to='/courses/premium'><Button  variant="outline-danger"><span className='fw-bold'>Get premium access</span></Button></Link>
                     </div>
                 </div>
             </Container>
