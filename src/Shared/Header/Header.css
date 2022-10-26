@@ -17,3 +17,12 @@
     height: 60px;
     margin-right: 10px;
 }
+.toggle {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+.theme {
+    margin-top: 9px;
+    margin-right: 5px;
+    font-weight: bolder;
+}

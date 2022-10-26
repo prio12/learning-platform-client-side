@@ -5,10 +5,20 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import Logo from "../../assest/logo/tutor-by-arsalart-dribbble.png";
-import { BsToggleOn, BsToggleOff } from "react-icons/bs";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import "./Header.css";
+import { useState } from "react";
 
 const Header = () => {
+
+  const [theme,setTheme] =useState('')
+
+  const handleLightTheme = () =>{
+    setTheme('Light')
+  }
+  const handleDarkTheme = () =>{
+    setTheme('Dark')
+  }
   return (
     <Navbar expand="lg">
       <Container className="header mb-3">
@@ -32,19 +42,12 @@ const Header = () => {
             <Nav.Link className="text-primary fw-bolder" as={Link} to="blog">
               Blog
             </Nav.Link>
-            <Nav.Link className="text-primary fw-bolder" href="#pricing">
-              toggle theme
-            </Nav.Link>
-            {/* <button><BsToggleOn></BsToggleOn></button>
-            <button><BsToggleOff></BsToggleOff></button> */}
-           {/* <BsToggleOn className="mt-3"></BsToggleOn><BsToggleOff className="mt-3"></BsToggleOff> */}
-           <Nav.Link className="text-primary fw-bolder">
-              <BsToggleOn></BsToggleOn>
-            </Nav.Link>
-           <Nav.Link className="text-primary fw-bolder">
-              <BsToggleOff></BsToggleOff>
-            </Nav.Link>
-          </Nav>
+            <p className="theme text-primary">{theme}</p>
+              <div>
+                <BsFillSunFill onClick={handleLightTheme} className="toggle"></BsFillSunFill>
+                <BsFillMoonFill onClick={handleDarkTheme} className="toggle"></BsFillMoonFill>
+              </div>
+            </Nav>
           <Nav>
             <Nav.Link className="text-primary fw-bolder" href="#deets">
               More deets
