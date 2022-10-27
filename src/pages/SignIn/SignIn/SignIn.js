@@ -1,5 +1,6 @@
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React from "react";
+import { useState } from "react";
 import { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -22,6 +23,8 @@ const SignIn = () => {
 
   const gitProvider = new GithubAuthProvider();
 
+  const [error,setError] = useState('')
+
   const handleGoogleSignIn = () => {
     providerLogin(googleProvider)
       .then((result) => {
@@ -30,7 +33,7 @@ const SignIn = () => {
         navigate(from , {replace: true})
         
       })
-      .catch((error) => console.error(error));
+     .catch(error => setError(error))
   };
   const handleGitSignIn = () => {
     gProviderLogin(gitProvider)
@@ -39,7 +42,7 @@ const SignIn = () => {
         console.log(user);
         navigate(from , {replace: true})
       })
-      .catch((error) => console.error(error));
+      .catch(error => setError(error))
   };
 
   const handleSignIn = (event) => {
@@ -50,11 +53,16 @@ const SignIn = () => {
     form.reset();
     console.log(email, password);
 
-    logIn(email, password).then((result) => {
+    logIn(email, password)
+    .then((result) => {
       const user = result.user;
       console.log(user);
       navigate(from , {replace: true})
-    });
+    })
+    .catch(err => {
+        console.log(err)
+    })
+    
   };
   return (
     <div className="form-holder login-form-container container rounded p-5">
@@ -94,7 +102,6 @@ const SignIn = () => {
                   New here? <Link to="/signup">Create a new account</Link>
                 </p>
                 <Form.Text className="text-danger">
-                  {/* We'll never share your email with anyone else. */}
                 </Form.Text>
               </Form>
             </Container>
@@ -106,6 +113,9 @@ const SignIn = () => {
                 Sign in With Google
               </Button>
             </div>
+            <Form.Text className="text-danger">
+                <p>{error}</p>
+        </Form.Text>
             <div className="text-center">
               <Button variant="outline-danger" onClick={handleGitSignIn}>
                 Sign in With Github

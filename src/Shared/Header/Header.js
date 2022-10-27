@@ -11,6 +11,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import { FaUser } from "react-icons/fa";
+import ReactTooltip from 'react-tooltip';
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -98,14 +99,19 @@ const Header = () => {
               {user?.photoURL ? (
                 <div>
                   <Image
+                      data-tip={user?.displayName}
                       roundedCircle
                       style={{ height: "30px" }}
                       src={user?.photoURL}
                     ></Image>
+                    <ReactTooltip />
                 </div>
               ) : (
                 <div>
-                  <FaUser></FaUser>
+                  <FaUser
+                  data-tip={user?.displayName ? user.displayName : 'No UserName'}
+                  ></FaUser>
+                  <ReactTooltip />
                 </div>
               )}
             </Nav.Link>
