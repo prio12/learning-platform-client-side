@@ -54,7 +54,7 @@ const Header = () => {
               Blog
             </Nav.Link>
           </Nav>
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex theme-container align-items-center justify-content-center">
             <p className="theme text-primary">{theme}</p>
             <div>
               <BsFillSunFill
