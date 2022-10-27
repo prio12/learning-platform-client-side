@@ -71,7 +71,7 @@ const Header = () => {
               {user?.uid ? (
                 <>
                   <div>
-                    <span>{user.displayName}</span>
+                    {/* <span>{user.displayName}</span> */}
                     <Button variant="outline-info mx-2" onClick={handleLogOut}>
                       Log out
                     </Button>
@@ -97,13 +97,11 @@ const Header = () => {
             <Nav.Link className="text-primary fw-bolder">
               {user?.photoURL ? (
                 <div>
-                  <Tooltip title="bvr">
-                    <Image
+                  <Image
                       roundedCircle
                       style={{ height: "30px" }}
                       src={user?.photoURL}
                     ></Image>
-                  </Tooltip>
                 </div>
               ) : (
                 <div>
