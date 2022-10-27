@@ -1,12 +1,20 @@
-# Getting Started with Create React App
+# Getting Started with Create Learning Mate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped hosted on :
 
-## Available Scripts
+## Available Features
 
-In the project directory, you can run:
+In this project You will find :
 
-### `npm start`
+### Learning Mate as default Route
+
+### Courses For Total Courses at a glance
+
+### FAQ for some asked questions
+
+### Blog for some questions also
+
+### In the course section there's a side nav bar, user can know the details about provided courses
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
