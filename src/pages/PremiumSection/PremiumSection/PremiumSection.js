@@ -24,7 +24,7 @@ const PremiumSection = () => {
                   <Image
                       roundedCircle
                       className='ps-3'
-                      style={{ height: "100%", }}
+                      style={{ width: "40%", }}
                       src={user?.photoURL}
                     ></Image>
                 </div>
@@ -47,7 +47,7 @@ const PremiumSection = () => {
                                     user?.email? 
                                     <p><small><span className='fw-bold'>Email:</span> {user.email}</small></p>
                                     :
-                                    <p><small>No Email Found</small></p>
+                                    <p><small><span className='fw-bold'>Email: </span>No Email Found</small></p>
                                 }
                             </div>
                         </div>
