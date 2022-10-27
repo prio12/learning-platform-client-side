@@ -40,7 +40,8 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/premium',
-                element:<CheckOutRoute><PremiumSection></PremiumSection></CheckOutRoute>
+                element:<CheckOutRoute><PremiumSection></PremiumSection></CheckOutRoute>,
+                loader: () => fetch('http://localhost:5000/courses')
             },
             {
                 path:'/signup',
