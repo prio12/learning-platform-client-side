@@ -1,3 +1,4 @@
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -10,6 +11,31 @@ import './SignIn.css'
 const SignIn = () => {
 
     const {logIn} = useContext(AuthContext);
+
+    const {providerLogin, gProviderLogin} = useContext(AuthContext);
+
+  const googleProvider = new GoogleAuthProvider();
+
+  const gitProvider =  new GithubAuthProvider();
+
+  const handleGoogleSignIn = () =>{
+    providerLogin(googleProvider)
+    .then(result =>{
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error => console.error(error))
+
+  }
+  const handleGitSignIn = () =>{
+    providerLogin(gitProvider)
+    .then(result =>{
+      const user = result.user;
+      console.log(user)
+    })
+    .catch(error => console.error(error))
+
+  }
 
     const handleSignIn = event =>{
         event.preventDefault();
@@ -58,10 +84,10 @@ const SignIn = () => {
                 <Col lg='4' className='more-signIn-sec p-5'>
                     <h5 className='text-center fw-bold'>More Ways To Sign in</h5>
                         <div className='text-center mb-2 mt-5'>
-                        <Button variant="outline-primary">Sign in With Google</Button>
+                        <Button variant="outline-primary" onClick={handleGoogleSignIn}>Sign in With Google</Button>
                         </div>
                         <div className='text-center'>
-                        <Button variant="outline-danger">Sign in With Github</Button>
+                        <Button variant="outline-danger" onClick={handleGitSignIn}>Sign in With Github</Button>
                         </div>
                     
                    
