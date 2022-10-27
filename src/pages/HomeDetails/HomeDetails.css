@@ -3,3 +3,18 @@
     box-shadow: 5px 20px 30px 5px;
     
 }
+
+@media only screen and (max-width: 600px) {
+    .home-details {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-details img {
+        min-width: 100%;
+    }
+    .home-details-info {
+        padding: 10px;
+    }
+  }
+
+

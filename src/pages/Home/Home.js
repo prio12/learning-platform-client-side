@@ -15,7 +15,7 @@ const Home = () => {
       <div>
         <Container className='home'>
             <h3 className='text-center py-5 greeting-title'>Welcome To Learning Mate</h3>
-            <div className='home-details-container'>
+            <div>
               {
                 data.map(details => <HomeDetails
                 key={details.id}
