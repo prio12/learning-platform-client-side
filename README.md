@@ -6,15 +6,21 @@ This project was bootstrapped hosted on :
 
 In this project You will find :
 
-### Learning Mate as default Route
+### 1. Learning Mate as default Route
 
-### Courses For Total Courses at a glance
+### 2. Courses For Total Courses at a glance
 
-### FAQ for some asked questions
+### 3. FAQ for some asked questions
 
-### Blog for some questions also
+### 4 .Blog for some questions also
 
-### In the course section there's a side nav bar, user can know the details about provided courses
+### 5. In the course section there's a side nav bar, user can know the details about provided courses.
+
+### 6. USers have to sign in to access the premium section
+
+### 7. Users can signIn in 3 deferent ways
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
