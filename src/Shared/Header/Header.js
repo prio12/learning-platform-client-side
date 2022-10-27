@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Image } from "react-bootstrap";
+import { Button, Image, Tooltip } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -10,25 +10,25 @@ import "./Header.css";
 import { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+import { FaUser } from "react-icons/fa";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
 
-  const {user, logOut} = useContext(AuthContext)
-
-  const handleLogOut = () =>{
+  const handleLogOut = () => {
     logOut()
-    .then(() =>{})
-    .then(error => console.error(error))
-  }
+      .then(() => {})
+      .then((error) => console.error(error));
+  };
 
-  const [theme,setTheme] =useState('')
+  const [theme, setTheme] = useState("");
 
-  const handleLightTheme = () =>{
-    setTheme('Light')
-  }
-  const handleDarkTheme = () =>{
-    setTheme('Dark')
-  }
+  const handleLightTheme = () => {
+    setTheme("Light");
+  };
+  const handleDarkTheme = () => {
+    setTheme("Dark");
+  };
   return (
     <Navbar expand="lg">
       <Container className="header mb-3">
@@ -47,41 +47,69 @@ const Header = () => {
               Courses
             </Nav.Link>
             <Nav.Link className="text-primary fw-bolder" as={Link} to="/faq">
-            FAQ
+              FAQ
             </Nav.Link>
             <Nav.Link className="text-primary fw-bolder" as={Link} to="blog">
               Blog
             </Nav.Link>
-            </Nav>
-            <div className="d-flex align-items-center justify-content-center">
+          </Nav>
+          <div className="d-flex align-items-center justify-content-center">
             <p className="theme text-primary">{theme}</p>
-              <div>
-                <BsFillSunFill className="toggle" onClick={handleLightTheme} ></BsFillSunFill>
-                <BsFillMoonFill className="toggle" onClick={handleDarkTheme} ></BsFillMoonFill>
-              </div>
+            <div>
+              <BsFillSunFill
+                className="toggle"
+                onClick={handleLightTheme}
+              ></BsFillSunFill>
+              <BsFillMoonFill
+                className="toggle"
+                onClick={handleDarkTheme}
+              ></BsFillMoonFill>
             </div>
+          </div>
           <Nav>
             <Nav.Link>
-            {
-                    user?.uid ?
-                    <>
-                        <span>{user.displayName}</span>
-                        <Button  variant="outline-info mx-2" onClick={handleLogOut}>Log out</Button>
-                    </>
-                    :
-                    <>
-                        <Button as={Link} to="/signIn" variant="outline-info mx-2">Sign in</Button>
-                        <Button as={Link} to="/signup" variant="outline-danger mx-2">Sign up</Button>
-                        
-                    </>
-                }
+              {user?.uid ? (
+                <>
+                  <div>
+                    <span>{user.displayName}</span>
+                    <Button variant="outline-info mx-2" onClick={handleLogOut}>
+                      Log out
+                    </Button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <Button as={Link} to="/signIn" variant="outline-info mx-2">
+                      Sign in
+                    </Button>
+                    <Button
+                      as={Link}
+                      to="/signup"
+                      variant="outline-danger mx-2"
+                    >
+                      Sign up
+                    </Button>
+                  </div>
+                </>
+              )}
             </Nav.Link>
-            <Nav.Link
-              className="text-primary fw-bolder"
-              eventKey={2}
-              href="#memes"
-            >
-              Dank memes
+            <Nav.Link className="text-primary fw-bolder">
+              {user?.photoURL ? (
+                <div>
+                  <Tooltip title="bvr">
+                    <Image
+                      roundedCircle
+                      style={{ height: "30px" }}
+                      src={user?.photoURL}
+                    ></Image>
+                  </Tooltip>
+                </div>
+              ) : (
+                <div>
+                  <FaUser></FaUser>
+                </div>
+              )}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
