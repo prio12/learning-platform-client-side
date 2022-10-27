@@ -8,6 +8,7 @@ import Home from "../../pages/Home/Home";
 import PremiumSection from "../../pages/PremiumSection/PremiumSection/PremiumSection";
 import SignIn from "../../pages/SignIn/SignIn/SignIn";
 import SignUp from "../../pages/SignUp/SignUp/SignUp";
+import CheckOutRoute from "../Checkout/ChekoutRoute/CheckOutRoute";
 
 export const router = createBrowserRouter([
     {
@@ -38,8 +39,8 @@ export const router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
             {
-                path:'/courses/premium',
-                element:<PremiumSection></PremiumSection>
+                path:'/premium',
+                element:<CheckOutRoute><PremiumSection></PremiumSection></CheckOutRoute>
             },
             {
                 path:'/signup',
