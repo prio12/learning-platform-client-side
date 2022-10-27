@@ -104,19 +104,19 @@ const Header = () => {
                       style={{ height: "30px" }}
                       src={user?.photoURL}
                     ></Image>
-                    <ReactTooltip />
+                    
                 </div>
               ) : (
                 <div>
                   <FaUser
                   data-tip={user?.displayName ? user.displayName : 'No UserName'}
                   ></FaUser>
-                  <ReactTooltip />
                 </div>
               )}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <ReactTooltip />
       </Container>
     </Navbar>
   );

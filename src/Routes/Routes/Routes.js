@@ -4,6 +4,7 @@ import Blog from "../../pages/Blog/Blog/Blog";
 import CourseDetails from "../../pages/CourseDetails/CourseDetails/CourseDetails";
 import Courses from "../../pages/Courses/Courses/Courses";
 import Faq from "../../pages/Faq/Faq/Faq";
+import HandleError from "../../pages/HandleError/HandleError";
 import Home from "../../pages/Home/Home";
 import PremiumSection from "../../pages/PremiumSection/PremiumSection/PremiumSection";
 import SignIn from "../../pages/SignIn/SignIn/SignIn";
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
             }
 
         ]
-    }
+    },
+    {
+        path: "*",
+        element:<HandleError></HandleError> ,
+      },
 
 ])

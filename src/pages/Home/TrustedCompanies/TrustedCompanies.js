@@ -19,10 +19,10 @@ const TrustedCompanies = () => {
         <div className="d-flex justify-content-center">
         <Carousel className="companies-carousel">
           <Carousel.Item>
-            <img className="d-block w-100" src={Company1} alt="First slide" />
+            <img className="d-block carousel-img w-100" src={Company1} alt="First slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src={Company2} alt="Third slide" />
+            <img className="d-block carousel-img w-100" src={Company2} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
         </div>

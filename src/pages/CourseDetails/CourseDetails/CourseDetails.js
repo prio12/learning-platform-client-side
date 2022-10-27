@@ -27,9 +27,9 @@ const CourseDetails = () => {
                     <div className='ms-4 course-details-holder'>
                         <h4 className='fw-bold'>{title}</h4>
                         <p>{details}</p>
-                        <div className='d-flex justify-content-between me-3 fw-bold '>
+                        <div className='d-flex course-rating justify-content-between me-3 fw-bold '>
                             <p>Rating : {rating.number}</p>
-                            <p>Total Enrolled: {total_downloaded}K</p>
+                            <p>Enrolled: {total_downloaded}K</p>
                             <p>Price: {price}$</p>
                         </div>
                         

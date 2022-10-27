@@ -103,7 +103,7 @@ const SignIn = () => {
                   />
                 </Form.Group>
                 <p className="text-danger">{error}</p>
-                <Button variant="outline-danger" type="submit">
+                <Button variant="outline-danger" className="form-signIn-btn" type="submit">
                   Sign in
                 </Button>
                 <p className="mt-2 fw-bold">

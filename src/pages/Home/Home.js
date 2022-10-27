@@ -26,9 +26,9 @@ const Home = () => {
            
       </Container>
       <div className='my-5 feedback-section p-5 container rounded'>
-        <Container>
-                <Feedback></Feedback>
-        </Container>
+        <div>
+        <Feedback></Feedback>
+        </div>
       </div>
       <div>
         <div className='container  p-5 rounded'>

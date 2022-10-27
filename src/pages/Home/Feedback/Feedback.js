@@ -3,7 +3,7 @@ import './Feedback.css'
 
 const Feedback = () => {
     return (
-        <div className='d-flex w-full feedback-container container justify-content-between p-4'>
+        <div className='d-flex w-full feedback-details-container container justify-content-between p-4'>
             <div>
                 <div className='d-flex justify-content-center align-items-center feedback-details ' >
                 <h4 className='fw-bold'>1M</h4>
