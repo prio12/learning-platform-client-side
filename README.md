@@ -1,6 +1,6 @@
-# Getting Started with Create Learning Mate
+# Getting Started with  Learning Mate
 
-This project was bootstrapped hosted on :
+This project was  hosted on :
 
 ## Available Features
 
