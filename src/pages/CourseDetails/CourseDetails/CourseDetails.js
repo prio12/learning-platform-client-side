@@ -32,7 +32,9 @@ const CourseDetails = () => {
                             <p>Total Enrolled: {total_downloaded}K</p>
                             <p>Price: {price}$</p>
                         </div>
-                        <Link to='/premium'><Button  variant="outline-danger"><span className='fw-bold'>Get premium access</span></Button></Link>
+                        
+                        <Link  to='/premium'><Button  className='btn' variant="outline-danger"><span className='fw-bold'>Get premium access</span></Button></Link>
+                        
                     </div>
                 </div>
             </Container>
