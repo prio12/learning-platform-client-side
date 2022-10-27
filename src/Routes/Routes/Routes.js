@@ -19,12 +19,12 @@ export const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader: () => fetch('http://localhost:5000/homeData')
+                loader: () => fetch('https://assignment10-server-ecru.vercel.app/homeData')
             },
             {
                 path:'/courses',
                 element:<Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://assignment10-server-ecru.vercel.app/courses')
             },
             {
                 path:'/faq',
@@ -37,12 +37,12 @@ export const router = createBrowserRouter([
             {
                 path:'/courses/:id',
                 element: <CourseDetails></CourseDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://assignment10-server-ecru.vercel.app/courses/${params.id}`)
             },
             {
                 path:'/premium',
                 element:<CheckOutRoute><PremiumSection></PremiumSection></CheckOutRoute>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch('https://assignment10-server-ecru.vercel.app/courses')
             },
             {
                 path:'/signup',
