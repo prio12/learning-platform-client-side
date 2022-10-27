@@ -9,7 +9,7 @@
 }
 .feedback-section {
     background-color: DarkSalmon;
-    box-shadow: 5px 10px 15px 5px;;
+    box-shadow: 5px 10px 15px 5px;
 }
 
 @media only screen and (max-width: 600px) {
