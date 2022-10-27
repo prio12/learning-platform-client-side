@@ -33,7 +33,10 @@ const SignIn = () => {
         navigate(from , {replace: true})
         
       })
-     .catch(error => setError(error))
+     .catch( err => {
+        const errorMessage = err.message;
+        setError(errorMessage)
+     })
   };
   const handleGitSignIn = () => {
     gProviderLogin(gitProvider)
@@ -42,7 +45,10 @@ const SignIn = () => {
         console.log(user);
         navigate(from , {replace: true})
       })
-      .catch(error => setError(error))
+      .catch( err => {
+        const errorMessage = err.message;
+        setError(errorMessage)
+     })
   };
 
   const handleSignIn = (event) => {
@@ -59,9 +65,10 @@ const SignIn = () => {
       console.log(user);
       navigate(from , {replace: true})
     })
-    .catch(err => {
-        console.log(err)
-    })
+    .catch( err => {
+        const errorMessage = err.message;
+        setError(errorMessage)
+     })
     
   };
   return (
@@ -95,6 +102,7 @@ const SignIn = () => {
                     required
                   />
                 </Form.Group>
+                <p className="text-danger">{error}</p>
                 <Button variant="outline-danger" type="submit">
                   Sign in
                 </Button>
@@ -113,9 +121,6 @@ const SignIn = () => {
                 Sign in With Google
               </Button>
             </div>
-            <Form.Text className="text-danger">
-                <p>{error}</p>
-        </Form.Text>
             <div className="text-center">
               <Button variant="outline-danger" onClick={handleGitSignIn}>
                 Sign in With Github

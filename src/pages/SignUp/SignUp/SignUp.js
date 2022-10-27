@@ -26,9 +26,7 @@ const SignUp = () => {
 
         createUser(email,password)
         .then(result =>{
-            const user = result.user;
             navigate('/')
-            console.log(user)
             
         })
         .catch(err => {
@@ -66,7 +64,7 @@ const SignUp = () => {
         <Button variant="outline-danger" type="submit">
             Sign up
         </Button>
-        <Form.Text className="text-primary">
+        <Form.Text className="text-danger">
           <p>{error}</p>
         </Form.Text>
         <p className='mt-2 fw-bold'>Already have an account? <Link to='/signIn'>Sign in</Link></p>
