@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
@@ -11,6 +11,8 @@ const SignUp = () => {
 
     const navigate = useNavigate()
     const {createUser} =useContext(AuthContext)
+    const [error,setError] = useState('')
+
 
     const handleSignUp = event =>{
         event.preventDefault();
@@ -29,7 +31,10 @@ const SignUp = () => {
             console.log(user)
             
         })
-        .catch( error => console.error(error))
+        .catch(err => {
+            const errorMessage = err.message;
+            setError(errorMessage)
+        })
 
 
     }
@@ -61,10 +66,11 @@ const SignUp = () => {
         <Button variant="outline-danger" type="submit">
             Sign up
         </Button>
-        <p className='mt-2 fw-bold'>Already have an account? <Link to='/signIn'>Sign in</Link></p>
-      <Form.Text className="text-danger">
-          {/* We'll never share your email with anyone else. */}
+        <Form.Text className="text-primary">
+          <p>{error}</p>
         </Form.Text>
+        <p className='mt-2 fw-bold'>Already have an account? <Link to='/signIn'>Sign in</Link></p>
+      
     </Form>
             </Container>
             </div>
