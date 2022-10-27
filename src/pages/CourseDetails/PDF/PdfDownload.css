@@ -1,0 +1,11 @@
+@media only screen and (max-width: 600px) {
+    
+    .course-includes-title {
+        padding-top: 15px;
+    }
+    .course-includes {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+  }
